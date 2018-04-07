@@ -241,8 +241,7 @@ export function readConfigurationFile(filepath: string): RawConfigFile {
                     // Note: yaml.LoadOptions expects a schema value of type "any",
                     // but this trips up the no-unsafe-any rule.
                     // tslint:disable-next-line:no-unsafe-any
-                    schema: yaml.JSON_SCHEMA,
-                    strict: true,
+                    schema: yaml.DEFAULT_SAFE_SCHEMA
                 }) as RawConfigFile;
             }
         } catch (e) {
